@@ -1,0 +1,29 @@
+Creating the Backend Code Part 1
+
+Steps
+1. import packages and create functions folder
+2. add in CORS array and define middleware function
+3. add health endpoint
+4. navigate to swagger docs via /docs
+5. create post request for /post-audio/ which we will send a file into this post request; comment out for now
+6. create a small recording via online-voice-recorder.com 
+7. create new function to convert voice to text via whisperAPI called openai_requests.py; add that function into main.py
+8. using the post request before, copy it and create it as a get to test; this is where you will get the saved audio via the open command and pass in our convert_audio_to_text function
+9. create database.py function to get recent messages and pass in the context
+10. create function in openai_request that gets_chat_response; import database function; 
+    1. the flow is that the first message will come from database.py to set the context via system_role
+    2. openai_request.py will call a function that will accept my input (which should be my translated text) 
+11. lastly in the get_chat_responses add in the ChatCompletion api documentation code; return the response back from chatgpy via the choices[0].content object
+12. in main object /get, catch the message_decoded via HTTPException just in case
+13. in main object /get, import function, call the get_chat_response and pass in the translated text
+14. in database.py store messages which takes in user and assistant messages and appends to message list and dumps into json; create a reset message function as well; import these into main.py and call store messages in /get and create new api endpoint for resetting
+15. create text_to_speech.py for handling voice and create the body; if you need to know what to pass into the body, open the api_swagger page, open the text_to_speech POST api, look at the form called “Request Body” which is required; you will need to pass in headers as well
+16. import text_to_speech into main and add guard for chat_response; before return Done add in function and pass in chat_response and store into audio_output variable and add a guard after that to denote failed to get ElevenLabs
+17. lastly, create a function called iterfile that returns a yeild of audio_output and modifies the type to octet-stream; this will be a post request finally with this new media type and the async def will be a file: UploadFile, same as was commented out below initially
+18. Inside post request, we create a new open method that stores the new file into audio_input
+
+
+Testing ElevenLabs
+1. api.elevenlabs.io/docs 
+2. go to voices and run get command with API key which will produce a list of voice ID’s
+3. go to the text-to-speech api and pass in an ID and change the “text:<string>” to something else
