@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod
+  labels:
+    app: backend
+spec:
+  containers:
+  - name: backend-container
+    image: jtbregistry1911.azurecr.io/spanish_bot:backendv1
+    ports:
+    - containerPort: 8000
