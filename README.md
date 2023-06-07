@@ -2,6 +2,28 @@
 
 ## Purpose
 Create a voice enabled chatbot that is used for translation practice for tutoring students
+[ProjectLink](https://github.com/coderaidershaun/chatbot-conversation-jarvis)
+
+## Redeploying From Scratch Helpful Tips
+
+Ensure the following:
+- Make sure you apt update and upgrade
+- Handle Python install via WSL using `apt install python3-pip | python3.10-venv` respectively 
+- Activate the venv 
+- install `requirements.txt` as sudo
+
+FrontEnd
+- Install `NodeJS` via the command below because apt installs v14 which is not compatible
+- Run NPM installs on yarn and ts-node `npm install --global yarn ts-node`
+- Ensure `package.json` has correct file and run `yarn --exact` 
+
+```console
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash - &&\
+apt-get install -y nodejs
+```
+Potential Errors
+1. if error about lib-node package run the following `apt remove libnode-dev` and `apt clean`
+
 
 ## Tech Stack / Architecture
 
