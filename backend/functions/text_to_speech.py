@@ -18,10 +18,11 @@ def convert_text_to_speech(message):
   voice_rachel = "21m00Tcm4TlvDq8ikWAM"
   voice_antoni = "ErXwobaYiN019PkySvjV"
   voice_elli = "MF3mGyEYCl7XYWbV9V6O"
+  voice_sam = "pNInz6obpgDQGcFmaJgB"
 
   # Construct request headers and url
   headers = { "xi-api-key": ELEVEN_LABS_API_KEY, "Content-Type": "application/json", "accept": "audio/mpeg" }
-  endpoint = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_elli}"
+  endpoint = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_sam}"
 
   try:
     response = requests.post(endpoint, json=body, headers=headers)

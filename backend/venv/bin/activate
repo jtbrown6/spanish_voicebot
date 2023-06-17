@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/jamalbrown/Documents/00CODE/spanish_bot/venv"
+VIRTUAL_ENV="/Users/jamal/Documents/language_projects/spanish_voicebot/backend/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

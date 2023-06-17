@@ -42,8 +42,8 @@ const Controller = () => {
             audio.src = createBlobURL(blob);
 
             // Append to audio
-            const mariaMessage = { sender: "maria", blobUrl: audio.src };
-            messagesArr.push(mariaMessage);
+            const rachelMessage = { sender: "rachel", blobUrl: audio.src };
+            messagesArr.push(rachelMessage);
             setMessages(messagesArr);
 
             // Play audio
@@ -71,14 +71,14 @@ const Controller = () => {
                 key={index + audio.sender}
                 className={
                   "flex flex-col " +
-                  (audio.sender == "maria" && "flex items-end")
+                  (audio.sender == "rachel" && "flex items-end")
                 }
               >
                 {/* Sender */}
                 <div className="mt-4 ">
                   <p
                     className={
-                      audio.sender == "maria"
+                      audio.sender == "rachel"
                         ? "text-right mr-2 italic text-green-500"
                         : "ml-2 italic text-blue-500"
                     }
@@ -99,7 +99,7 @@ const Controller = () => {
 
           {messages.length == 0 && !isLoading && (
             <div className="text-center font-light italic mt-10">
-              Send maria a message...
+              Send Rachel a message...
             </div>
           )}
 
@@ -111,7 +111,7 @@ const Controller = () => {
         </div>
 
         {/* Recorder */}
-        <div className="fixed bottom-0 w-full py-6 border-t text-center bg-gradient-to-r from-yellow-500 to-orange-500">
+        <div className="fixed bottom-0 w-full py-6 border-t text-center bg-gradient-to-r from-sky-500 to-green-500">
           <div className="flex justify-center items-center w-full">
             <div>
               <RecordMessage handleStop={handleStop} />

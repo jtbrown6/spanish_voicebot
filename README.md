@@ -4,6 +4,26 @@
 Create a voice enabled chatbot that is used for translation practice for tutoring students
 [ProjectLink](https://github.com/coderaidershaun/chatbot-conversation-jarvis)
 
+## Troubleshooting
+
+Ensure that ElevenLabs API is not hitting maximum count which will return a /post-audio/ 400 error 
+
+## Redeploy from Clean Macbook Steps June 2023
+
+# Software Pre-Installs - Downloads
+1. nodejs and npm
+2. python and pip
+
+# Backend Steps
+1. Create virtual environment 
+2. pip3 install from requirements.txt
+3. add .env environment variables
+4. 
+
+# Frontend Steps
+1. Use npm to install both `-g yarn` and `ts-node`
+2. Run `yarn --exact` and `yarn dev`
+
 ## Redeploying From Scratch Helpful Tips
 
 Ensure the following:

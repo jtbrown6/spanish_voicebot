@@ -1,4 +1,4 @@
-#!/Users/jamalbrown/Documents/00CODE/spanish_bot/venv/bin/python3.11
+#!/Users/jamal/Documents/language_projects/spanish_voicebot/backend/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
